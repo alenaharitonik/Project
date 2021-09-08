@@ -1,0 +1,718 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+/* Don't kill focus outline for keyboard users: http://24ways.org/2009/dont-lose-your-focus */
+a:hover,
+a:active {
+  outline: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("./assets/fonts/Roboto-Thin.ttf");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("./assets/fonts/Roboto-Light.ttf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("./assets/fonts/Roboto-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("./assets/fonts/Roboto-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("./assets/fonts/Roboto-Bold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Forum;
+  src: url("./assets/fonts/Forum-Regular.ttf");
+  font-weight: 400;
+}
+
+/* Louvre */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+  /*width: calc(100% - 40px);*/
+}
+
+/* Header stylses start */
+
+header {
+  width: 100%;
+  background-color: #030303;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.header_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 49px;
+  height: 31px;
+  background-color: white;
+  -webkit-mask-image: url("assets/svg/Frame.svg");
+  -webkit-mask-size: cover;
+  transition: 1.5s;
+  cursor: pointer;
+}
+
+.logo:hover {
+  background-color: #9d8665;
+}
+
+.header_text {
+  font-family: Forum;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 31px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding-right: 466px;
+  padding-left: 25px;
+}
+
+.header_list {
+  display: flex;
+}
+
+.header_nav {
+  max-width: 775px;
+}
+
+.header_item {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 2px;
+  color: #ffffff;
+  list-style: none;
+  padding-right: 55px;
+}
+
+.header_link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.header_link:hover,
+.header_link:active {
+  color: #9d8665;
+}
+
+/* Header stylses end */
+
+.white_title {
+  font-family: Forum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 80px;
+  line-height: 90px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.section_dark {
+  background-color: #030303;
+}
+
+/* Welcome stylses start */
+
+.welcome {
+  padding-bottom: 60px;
+}
+
+.welcome_title {
+  padding-top: 150px;
+}
+
+.welcome_subtitle {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 33px;
+  letter-spacing: 2px;
+  color: #ffffff;
+  padding-top: 25px;
+  padding-bottom: 75px;
+}
+
+.discover_the_louvre_link {
+  width: 360px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #710707;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+.discover_the_louvre_link:hover,
+.discover_the_louvre_link:active {
+  background-color: #9d8665;
+}
+
+.welcome_pic {
+  height: 750px;
+  background: linear-gradient(
+      90deg,
+      #000000 0%,
+      rgba(0, 0, 0, 0.5) 16.19%,
+      rgba(0, 0, 0, 0) 30.73%
+    ),
+    url(./assets/img/welcome-slider/1.jpg) no-repeat right;
+  /*background-position: calc(100%-20px) calc(100%-10px);*/
+}
+
+/* Welcome stylses end */
+
+.dark_title {
+  font-family: Forum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 80px;
+  line-height: 90px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #9d8665;
+}
+
+.underline_title {
+  position: relative;
+}
+
+.underline_title::after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #710707;
+}
+
+.section {
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+/* Visiting stylses start */
+
+.visiting_container {
+  display: flex;
+  max-width: 1440px;
+  flex-wrap: wrap;
+  row-gap: 78px;
+  column-gap: 60px;
+  padding-top: 103px;
+}
+
+.visiting_link {
+  display: block;
+}
+
+.visiting_img {
+  height: 285px;
+  width: 440px;
+}
+
+.visiting_title {
+  font-family: Forum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 35px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #000000;
+  position: relative;
+  padding-top: 25px;
+}
+
+.visiting_title::after {
+  content: "";
+  position: absolute;
+  bottom: -9px;
+  left: 0;
+  width: 300px;
+  height: 2px;
+  background-color: #710707;
+}
+
+.visiting_subtitle {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 22px;
+  line-height: 26px;
+  color: #000000;
+  padding-top: 21px;
+}
+
+.visiting_subtitle1 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  padding-top: 10px;
+}
+
+/* Visiting stylses end */
+
+/* explore stylses start */
+
+.explore_container {
+  display: flex;
+}
+
+.underline_title_explore {
+  position: relative;
+}
+
+.underline_title_explore::after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  width: 660px;
+  height: 3px;
+  background-color: #710707;
+}
+
+.explore_subtitle1 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 38px;
+  color: #ffffff;
+  padding-top: 103px;
+  width: 650px;
+}
+
+.explore_subtitle {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 38px;
+  color: #ffffff;
+  padding-top: 25px;
+  width: 660px;
+}
+
+.yellow {
+  color: #caaa7d;
+}
+
+.explore_text {
+  padding-right: 60px;
+}
+
+.explore_pic {
+  background: url(./assets/img/explore-slider/after.jpg) no-repeat right;
+  height: 700px;
+  width: 720px;
+  padding-top: 15px;
+}
+
+/* explore stylses end */
+
+/* video stylses start */
+.video_container {
+  display: flex;
+  align-items: center;
+}
+
+.video_title {
+  padding-right: 115px;
+}
+
+.video_subtitle {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 38px;
+  color: #000000;
+  width: 720px;
+}
+
+video {
+  width: 1440px;
+  height: 650px;
+  padding-top: 75px;
+}
+
+/* video stylses end */
+
+.section1 {
+  padding-top: 75px;
+  padding-bottom: 0px;
+}
+
+/* gallery stylses start */
+
+.pic_gallery_conteiner{
+  overflow-y: hidden;
+  overflow-x: hidden;
+  
+  padding-top: 75px;
+}
+.pic_gallery_inner_conteiner{
+   height: 2035px;
+   width: 1440px;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction:column;
+   justify-content: start;
+   row-gap: 24px;
+   column-gap: 36px;
+}
+
+/*.galery {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  
+}*/
+
+
+/* gallery stylses end */
+
+/* contacts  stylses start */
+
+/* contacts  stylses end */
+.contacts_container{
+  display:flex;
+  padding-top: 103px;
+  justify-content: space-between;
+}
+
+.contacts_text_container {
+  padding-right: 198px;
+  
+}
+.contacts_subtitle {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+  color: #000000;
+  width: 227px ;
+  padding-bottom: 25px;
+}
+
+.contacts_text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  color: #000000;
+  padding-top: 25px;
+}
+
+.contacts_link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.contacts_link:hover,
+.contacts_link:active {
+  background-color: #9d8665;
+}
+
+.contacts_pic {
+  display: flex;
+  background: url(./assets/img/map.png) right;
+  width: 960px;
+  height: 620px;
+
+}
+
+/* footer  stylses start */
+
+footer {
+  width: 100%;
+  background-color: #030303;
+  padding-top: 75px;
+  padding-bottom: 50px;
+}
+
+.footer_container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.footer_logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer_text {
+  font-family: Forum;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 31px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding-left: 25px;
+}
+
+.footer_list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 25px;
+  column-gap: 150px;
+  max-width: 362px;
+  padding-right: 372px;
+  padding-left: 142px;
+  
+}
+
+.footer_item {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 2px;
+  color: #ffffff;
+  list-style: none;
+  width: 106px;
+}
+
+.footer_link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.footer_link:hover,
+.footer_link:active {
+  color: #9d8665;
+}
+
+.footer_list1 {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 87px;
+}
+
+.footer_item1 {
+  padding-left: 25px;
+}
+
+.underline {
+  position: relative;
+}
+
+.underline::after {
+  content: "";
+  position: absolute;
+  bottom: -55px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color:  #666666;
+}
+
+.span_text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 22px;
+  line-height: 22px;
+  letter-spacing: 2px;
+  color: #FFFFFF;
+}
+
+.span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 108px;
+}
+
+.span_link{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 22px;
+  line-height: 22px;
+  letter-spacing: 2px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.span_link:hover,
+.span_link:active {
+  color: #9d8665;
+}
+
+/* footer  stylses end */
