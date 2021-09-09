@@ -516,35 +516,128 @@ video {
 /* gallery stylses start */
 
 .pic_gallery_conteiner{
-  overflow-y: hidden;
   overflow-x: hidden;
-  
+  overflow-y: hidden;
+  height: 1960px;
+  width: 1440px;
   padding-top: 75px;
 }
 .pic_gallery_inner_conteiner{
-   height: 2035px;
-   width: 1440px;
    display: flex;
    flex-wrap: wrap;
    flex-direction:column;
-   justify-content: start;
+   justify-content:flex-start;
    row-gap: 24px;
    column-gap: 36px;
+   height: 2850px;
 }
 
-/*.galery {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  
-}*/
+.galery1_3 {
+  padding-top: 50px;
+}
+
+.pic_gallery_inner_conteiner::after {
+  position: absolute;
+  width: 1440px;
+  height: 360px;
+  content: "";
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+  margin-top: 1600px;
+}
 
 
 /* gallery stylses end */
 
+/* tickets stylses start */
+
+.tickets_container {
+  padding-top: 103px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.tickets_pic {
+  display: flex;
+  background: url(./assets/img/Rectangle.jpg) no-repeat;
+  width: 720px;
+  height: 550px;
+  margin-right: 60px;
+  
+}
+
+.tickets_title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 33px;
+  color: #000000;
+  padding-bottom: 25px;
+}
+
+label {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  color: #000000;
+}
+
+.form_radio {
+  padding-top: 25px;
+}
+
+.form_radio input[type=radio] {
+	display: none;
+}
+
+.form_radio label {
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+	padding-left: 40px;
+	margin-right: 0;
+	line-height: 26px;
+	user-select: none;
+}
+
+.form_radio label:before {
+	content: "";
+	display: inline-block;
+	width: 17px;
+	height: 17px;
+	position: absolute;
+	left: 0;
+	bottom: 4px;
+  background: url(./assets/svg/Ellipse\ 3.svg) 0 0 no-repeat;
+	
+}
+ 
+/* Checked */
+.form_radio input[type=radio]:checked + label:before {
+  background: url(./assets/svg/Ellipse\ 0.svg) 0 0 no-repeat;
+}
+ 
+/* Hover */
+.form_radio label:hover:before {
+	filter: ;
+}
+ 
+
+
+
+
+
+
+
+/* tickets stylses end */
+
+
 /* contacts  stylses start */
 
-/* contacts  stylses end */
+
 .contacts_container{
   display:flex;
   padding-top: 103px;
@@ -593,6 +686,8 @@ video {
   height: 620px;
 
 }
+
+/* contacts  stylses end */
 
 /* footer  stylses start */
 
